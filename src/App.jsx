@@ -7,7 +7,11 @@ import {
   FaArrowRight,
   FaEnvelope,
 } from "react-icons/fa";
-import { motion, AnimatePresence  } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+
+import GymWebsite from "./assest/GymWebsite.jpeg";
+import TravelWebsite from "./assest/TravelWebsite.jpeg";
+import restaurantImg from "./assest/TravelWebsite.jpeg";
 
 export default function App() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -345,9 +349,27 @@ export default function App() {
 
           <div className="grid md:grid-cols-3 gap-10">
             {[
-              "Travel Agency Website",
-              "Home Service Website",
-              "Restaurant Website",
+              {
+                title: "Travel Agency Website",
+                image: TravelWebsite,
+                description:
+                  "Modern travel booking website with WhatsApp inquiry system and destination showcase.",
+                link: "https://trialtravel.netlify.app",
+              },
+              {
+                title: "Home Service Website",
+                image: GymWebsite,
+                description:
+                  "Home service platform with booking system, technician assignment and admin dashboard.",
+                link: "https://ironplusgym.netlify.app",
+              },
+              {
+                title: "Restaurant Website",
+                image: restaurantImg,
+                description:
+                  "Responsive restaurant website with dynamic menu display and reservation feature.",
+                link: "https://your-restaurant-link.com",
+              },
             ].map((project, index) => (
               <motion.div
                 key={index}
@@ -356,19 +378,36 @@ export default function App() {
                 transition={{ delay: index * 0.2 }}
                 className="group rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500"
               >
-                <div className="h-56 bg-gradient-to-br from-indigo-200 to-indigo-400 group-hover:scale-110 transition duration-500"></div>
+                <div className="h-56 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                  />
+                </div>
 
                 <div className="p-8 bg-white text-left">
-                  <h4 className="text-xl font-semibold mb-3">{project}</h4>
+                  <h4 className="text-xl font-semibold mb-3">
+                    {project.title}
+                  </h4>
 
                   <p className="text-gray-600 text-sm mb-4">
-                    Fast, modern and conversion-focused business website.
+                    {project.description}
                   </p>
 
-                  <button className="text-indigo-600 font-semibold flex items-center gap-2 group-hover:gap-4 transition-all">
+                  {/* <button className="text-indigo-600 font-semibold flex items-center gap-2 group-hover:gap-4 transition-all">
                     View Case Study
                     <FaArrowRight />
-                  </button>
+                  </button> */}
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-indigo-600 font-semibold flex items-center gap-2 group-hover:gap-4 transition-all"
+                  >
+                    View Case Study
+                    <FaArrowRight />
+                  </a>
                 </div>
               </motion.div>
             ))}
@@ -422,7 +461,7 @@ export default function App() {
 
             {/* Email Button */}
             <a
-               href="mailto:ansarisikkim5@gmail.com?subject=Project%20Inquiry&body=Hi%20Irfan,%20I%20want%20to%20build%20a%20website."
+              href="mailto:ansarisikkim5@gmail.com?subject=Project%20Inquiry&body=Hi%20Irfan,%20I%20want%20to%20build%20a%20website."
               className="border border-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-indigo-700 transition duration-300"
             >
               Send an Email
