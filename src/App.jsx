@@ -9,9 +9,9 @@ import {
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
-import GymWebsite from "./assest/GymWebsite.jpeg";
-import TravelWebsite from "./assest/TravelWebsite.jpeg";
-import restaurantImg from "./assest/TravelWebsite.jpeg";
+import Gym from "./assest/Gym.PNG";
+import Travel from "./assest/Travel.PNG";
+import Cafe from "./assest/Cafe.PNG";
 
 export default function App() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -351,24 +351,24 @@ export default function App() {
             {[
               {
                 title: "Travel Agency Website",
-                image: TravelWebsite,
+                image: Travel,
                 description:
                   "Modern travel booking website with WhatsApp inquiry system and destination showcase.",
                 link: "https://trialtravel.netlify.app",
               },
               {
-                title: "Home Service Website",
-                image: GymWebsite,
+                title: "Iron Plus Gym Website",
+                image: Gym,
                 description:
-                  "Home service platform with booking system, technician assignment and admin dashboard.",
+                  "Modern gym website showcasing facilities, trainer profiles, and membership plans with a responsive design.",
                 link: "https://ironplusgym.netlify.app",
               },
               {
-                title: "Restaurant Website",
-                image: restaurantImg,
+                title: "Brew Haven Cafe Website",
+                image: Cafe,
                 description:
-                  "Responsive restaurant website with dynamic menu display and reservation feature.",
-                link: "https://your-restaurant-link.com",
+                  "Interactive cafe website featuring dynamic menu, table reservations, and a cozy, user-friendly interface.",
+                link: "https://trialcafewebsite.netlify.app",
               },
             ].map((project, index) => (
               <motion.div
@@ -405,7 +405,7 @@ export default function App() {
                     rel="noopener noreferrer"
                     className="text-indigo-600 font-semibold flex items-center gap-2 group-hover:gap-4 transition-all"
                   >
-                    View Case Study
+                    Visit Website
                     <FaArrowRight />
                   </a>
                 </div>
