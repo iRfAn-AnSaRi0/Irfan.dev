@@ -354,21 +354,21 @@ export default function App() {
                 image: Travel,
                 description:
                   "Modern travel booking website with WhatsApp inquiry system and destination showcase.",
-                link: "https://trialtravel.netlify.app",
+                link: "https://go-sikkim-website.netlify.app",
               },
               {
                 title: "Iron Plus Gym Website",
                 image: Gym,
                 description:
                   "Modern gym website showcasing facilities, trainer profiles, and membership plans with a responsive design.",
-                link: "https://ironplusgym.netlify.app",
+                link: "https://ironpuls-gym-website.netlify.app",
               },
               {
                 title: "Brew Haven Cafe Website",
                 image: Cafe,
                 description:
                   "Interactive cafe website featuring dynamic menu, table reservations, and a cozy, user-friendly interface.",
-                link: "https://trialcafewebsite.netlify.app",
+                link: "https://brew-cafe-website.netlify.app",
               },
             ].map((project, index) => (
               <motion.div
