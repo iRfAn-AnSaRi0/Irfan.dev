@@ -50,7 +50,7 @@ export default function App() {
           {/* Mobile Toggle Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-2xl text-indigo-600"
+            className="md:hidden text-3xl text-indigo-600"
           >
             {isOpen ? "✕" : "☰"}
           </button>
